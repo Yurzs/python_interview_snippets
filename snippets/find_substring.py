@@ -9,7 +9,6 @@ def find_substing(s: str, pattern: str) -> list:
     """
     match_storage = []
     for n, c in enumerate(s):
-        if c == pattern[0]:
-            if s[n:n+len(pattern)] == pattern:
-                match_storage.append([n, n + len(pattern)])
+        if s[n:n + len(pattern)] == pattern:
+            match_storage.append([n, n + len(pattern)])
     return match_storage
